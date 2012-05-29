@@ -16,6 +16,8 @@ $app['debug'] = true;
 //-- Asignamos el usuario y contraseña para el acceso al servicio
 $app['auth.user'] = AUTH_USER;
 $app['auth.pass'] = AUTH_PASS;
+$app['auth.string'] = $app['auth.user'] . ':' . $app['auth.pass'];
+$app['rest.host'] = 'http://local.servidorrestsilex/';
 
 //-- Ejecutamos la aplicación
 $app->run();
