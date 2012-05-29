@@ -9,7 +9,7 @@ $app->get('/ver-comentarios.html', function() use($app){
     $url = $app['rest.host'] . 'ver-comentarios.json';
     $comentarios = json_decode($app['rest']->url($url)->get());
     
-    return $app['twig']->render('base.html.twig', array(
+    return $app['twig']->render('comentarios.html.twig', array(
         'comentarios' => $comentarios
     ));
     

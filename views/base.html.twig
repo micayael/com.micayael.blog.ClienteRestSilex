@@ -6,29 +6,10 @@
         <meta charset="utf-8" />
     </head> 
 
-    <body> 
+    <body>
 
-        <table border="1">
-            <tr>
-                <th>id</th>
-                <th>author</th>
-                <th>email</th>
-                <th>content</th>
-                <th>created_at</th>
-                <th>updated_at</th>
-            </tr>
+        {% block body %}{% endblock %}
 
-        {% for comentario in comentarios %}
-            <tr>
-                <td>{{ comentario.id }}</td>
-                <td>{{ comentario.author }}</td>
-                <td>{{ comentario.email }}</td>
-                <td>{{ comentario.content }}</td>
-                <td>{{ comentario.created_at }}</td>
-                <td>{{ comentario.updated_at }}</td>
-            </tr>
-        {% endfor %}
-        </table>
     </body>
 </html>
 {% endspaceless %}
